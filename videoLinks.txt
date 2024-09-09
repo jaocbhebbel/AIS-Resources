@@ -5,3 +5,13 @@ This is a great resource to start with. Over the time of an hour, 3B1B
 thoroughly explains the mechanics of how a neural network learns. It assumes
 no prior knowledge, and culminates in a mathematical dive into
 backpropagation. Only the first 4 videos are strictly relevant.
+
+
+Building a Neural Network from scratch:
+https://www.youtube.com/watch?v=w8yWXqWQYmU&pp=ygUkbWFraW5nIGEgbmV1cmFsIG5ldHdvcmsgZnJvbSBzY3JhdGNo
+
+Building a network from scratch means not using PyTorch or TensorFlow. You
+must write your own optimizing function, as well as implement methods like
+propagation, initialization, and correction. This video builds perfectly on
+top of the 3Blue1Brown series. If you're interested in taking your AI
+knowledge to the next level, then this is a very attractive project to do.
