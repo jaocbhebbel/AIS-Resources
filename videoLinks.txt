@@ -1,0 +1,7 @@
+3Blue1Brown series:
+https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
+This is a great resource to start with. Over the time of an hour, 3B1B
+thoroughly explains the mechanics of how a neural network learns. It assumes
+no prior knowledge, and culminates in a mathematical dive into
+backpropagation. Only the first 4 videos are strictly relevant.
