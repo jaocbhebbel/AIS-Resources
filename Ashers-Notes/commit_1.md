@@ -21,10 +21,9 @@
 > Weight = What pixel pattern is the new neuron looking for?<br>
 > Bias = How strong must the incoming signal be to activate the neuron?<br>
 > 
-> Or in other words:<br>
-> When dealing with neurons linking between layers<br>
-> Weight is some formula for **how important this signal is to the recieving neuron**<br>
-> Bias is **how strong must the signal be to be considered important to the revieving neuron**<br>
+> *When dealing with neurons linking between layers*<br>
+> *Weight is some formula for **how important this signal is to the recieving neuron***<br>
+> *Bias is **how strong must the signal be to be considered important to the revieving neuron***<br>
 
  
 
@@ -65,4 +64,5 @@
 
 > ## Video 4:
 > HIIIII
- 
+ Hi
+ <font color="green"> Hi </font>
