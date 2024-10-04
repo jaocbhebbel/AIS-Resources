@@ -1,21 +1,35 @@
 
-> # https://www.youtube.com/watch?v=aircAruvnKk
+# https://www.youtube.com/watch?v=aircAruvnKk
+
 > ## Video 1:
 > 
 > Neuron – Thing that holds a number.<br>
-> The number inside the neuron is from 1-0 and it is called the activation. It represents how much the shown number looks like a possible number type.
-> Different layers in the network correspond to different parts of a number.
-> Each neuron is assigned a weight as it travels to a new neuron to a new layer. This weight is a number and you sum all the (activation*weight) terms to highlight a region on an image grid you want the next neuron in the new layer to focus on. Basically, from all the inputs, ones with low weights (not related to the region the next neuron is assigned to) get dissolved out.
-> So that’s cool and all but a weighted sum spits out a large number line so we put it in a sigmoid function to squish it down (just use multiplication to squish the numberline down to 0-1).
-> Ok well baby you don’t want ZERO to ONE but some other range for the neuron to be able to light up. We call the accepted weighted sum range the neuron’s BIAS.
-
-> TL;DR:
-> Weight = What pixel pattern is the new neuron looking for?
-> Bias = How strong must the incoming signal be to activate the neuron?
+> The number inside the neuron is from 1-0 and it is called the activation.<br>
+> It represents how much the handwritten number looks like a number 0-9.<br>
+> Different layers in the network correspond to different parts of a number.<br>
+> Each neuron is assigned a weight as it travels to a new neuron to a new layer.<br>
+> This weight is a number and you sum all the (activation*weight) terms to highlight a region on an image grid<br>
+> you want the next neuron in the new layer to focus on.<br>
+> Basically, from all the inputs, ones with low weights get dissolved out.<br>
+> So that’s cool but weighted sums are typically large numbers line so we put it in a sigmoid function to squish it down to 0-1.<br>
+> Ok, well mabye you don’t want ZERO to ONE to be the threshold for the next neuron to activate...<br>
+> So, we can add/subtract to the weight to change WHEN a neuron recieving a signal activates.<br>
+> We call the accepted weighted sum range the neuron’s BIAS.<br>
+ 
+> ### TL;DR
+>
+> Weight = What pixel pattern is the new neuron looking for?<br>
+> Bias = How strong must the incoming signal be to activate the neuron?<br>
+> 
+> Or in other words:<br>
+> When dealing with neurons linking between layers<br>
+> Weight is some formula for **how important this signal is to the recieving neuron**<br>
+> Bias is **how strong must the signal be to be considered important to the revieving neuron**<br>
 
  
 
-> # https://www.youtube.com/watch?v=IHZwWFHWa-w
+# https://www.youtube.com/watch?v=IHZwWFHWa-w
+
 > ## Video 2:
 > 
 > Cost function is how a machine learns. It sees how badly it performed: It works by adding up the squares of all the output neuron values and what they should be in an ideal world (you already know the answer to what you gave the machine for this stage). You sum those differences and get the cost. Obviously, when the cost is low, that means the machine is working near-perfect.
@@ -25,7 +39,8 @@
 
  
 
-> # https://www.youtube.com/watch?v=Ilg3gGewQ5U
+# https://www.youtube.com/watch?v=Ilg3gGewQ5U
+
 > ## Video 3:
 > 
 > Backpropagation is how we compute the steepest descent:
@@ -46,7 +61,8 @@
 
   
 
-> # https://www.youtube.com/watch?v=tIeHLnjs5U8
+# https://www.youtube.com/watch?v=tIeHLnjs5U8
+
 > ## Video 4:
 > HIIIII
  
