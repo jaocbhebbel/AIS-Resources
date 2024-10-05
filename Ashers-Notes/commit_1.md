@@ -1,21 +1,33 @@
 
-# https://www.youtube.com/watch?v=aircAruvnKk
+# <font color="#FFC19C"> Video 1: </font>
 
-> ## Video 1:
-> 
-> Neuron – Thing that holds a number.<br>
-> The number inside the neuron is from 1-0 and it is called the activation.<br>
+## [Link 1](https://www.youtube.com/watch?v=aircAruvnKk)
+
+> - Neuron – Thing that holds a number.<br>
+<br>
+> - The number inside the neuron is from 1-0 and it is called the activation.<br>
 > It represents how much the handwritten number looks like a number 0-9.<br>
-> Different layers in the network correspond to different parts of a number.<br>
-> Each neuron is assigned a weight as it travels to a new neuron to a new layer.<br>
-> This weight is a number and you sum all the (activation*weight) terms to highlight a region on an image grid<br>
-> you want the next neuron in the new layer to focus on.<br>
-> Basically, from all the inputs, ones with low weights get dissolved out.<br>
-> So that’s cool but weighted sums are typically large numbers line so we put it in a sigmoid function to squish it down to 0-1.<br>
-> Ok, well mabye you don’t want ZERO to ONE to be the threshold for the next neuron to activate...<br>
-> So, we can add/subtract to the weight to change WHEN a neuron recieving a signal activates.<br>
-> We call the accepted weighted sum range the neuron’s BIAS.<br>
- 
+<br>
+> - In theory, different layers in the network correspond to different features of a number.<br>
+> Such as curve, loop, size...<br>
+<br>
+> - Each neuron is assigned a weight as it travels to a new neuron in a new layer.<br>
+> This weight is a number<br>
+> You sum all the (activation*weight) terms to highlight a region of the handwritten number<br>
+> you want the neuron in the next layer to focus on.<br>
+<br>
+> - Basically, from all the inputs, ones with low weights get dissolved out.<br>
+> While ones with high weights are taken more into concideration for calculations.<br>
+<br>
+> - So that’s cool, but weighted sums are typically large numbers<br>
+> So we put them in a sigmoid function to squish 'em down to a 0-->1 range.<br>
+<br>
+> - Ok, well mabye you don’t want **0** to **1** to be the threshold for the next neuron to activate...<br>
+> *This could be for a few reasons I do not know...*<br>
+> So, we can add/subtract to the weight to change it.<br>
+> This changes the value the incoming signal needs to activate the next neuron<br>
+> We call this change to the accepted weighted sum range the neuron’s **bias**.<br>
+>
 > ### TL;DR
 >
 > Weight = What pixel pattern is the new neuron looking for?<br>
@@ -23,46 +35,135 @@
 > 
 > *When dealing with neurons linking between layers*<br>
 > *Weight is some formula for **how important this signal is to the recieving neuron***<br>
-> *Bias is **how strong must the signal be to be considered important to the revieving neuron***<br>
+> *Bias is **what threshold must the signal meet to be considered important to the revieving neuron***<br>
+<br>
 
  
 
-# https://www.youtube.com/watch?v=IHZwWFHWa-w
+# <font color="#FFC19C"> Video 2:</font>
 
-> ## Video 2:
+## [Link 2](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+
+> - Cost function is how a machine learns. It sees how badly it performed.<br>
+<br>
+> - It works by adding up the squares of difference between all the output activations and what they should be in an ideal world.<br>
+> In the training phase you should know what the expected output is.<br>
+<br>
+> - Obviously, when the cost is low, that means the machine is working near-perfect.<br>
+<br>
+> - Alright great, but how will it get better: If the cost function were graphed, you want a minimum point.<br>
+> You want to take the steepest (fastest) way down to the minimum.<br>
+> All this sounds like the negative gradient of the cost!<br>
+<br>
+> - Tip: Make step sizes proportional to slope so as you get closer<br>
+> and your slope levels out, you get more precise with the cost adjustments.<br>
+<br>
 > 
-> Cost function is how a machine learns. It sees how badly it performed: It works by adding up the squares of all the output neuron values and what they should be in an ideal world (you already know the answer to what you gave the machine for this stage). You sum those differences and get the cost. Obviously, when the cost is low, that means the machine is working near-perfect.
-> Alr great, but how will it get better: If the cost function were graphed, to get to a min point you want to take the steepest way down. So, take the negative gradient of the cost. Tip: Make step sizes proportional to slope so as you get closer you get more precise with adjusting each iteration of the neural network.
-> 
-> Something super cool is that the ACTUAL way the neural network works is by analyzing a hodge-podge mess of pixels representing traits of the whole image thousands of times. In other words, while it can give hits, it cannot give correct rejections. It gives confident, nonsense, answers. It’s like: Haha, the computer can’t draw. It cannot say no, it cannot do anything other than what it was told which implies its initial input IS a number.
+> - Now that we know some of the underlying math, it becomes clear the real way the neural network works.<br>
+> It analyzes a hodge-podge mess of individual pixels and combines them at the end.<br>
+> In other words, while it can give hits for a drawn number, it cannot give correct rejections.<br>
+> It also gives confident, nonsense, answers when shown a scribble.<br>
+> <br>
+> - *Is there a way to fix this? Yes, but let's not do that yet!*<br>
+<br>
 
  
 
-# https://www.youtube.com/watch?v=Ilg3gGewQ5U
+# <font color="#FFC19C">Video 3:</font>
 
-> ## Video 3:
-> 
-> Backpropagation is how we compute the steepest descent:
-> When it comes to honing-in on the lowest cost, changing a large weight value will have a larger effect than changing a small weight value.
-> Look at outputs from Neural Network and how it compares to expected values. Activations that are close to expected values should be nudged a little bit and activations that are super far should be nudged a lot (either up or down)
-> For each output neuron, three ways to modify its output: Change bias, change weights, change previous layers’ activations. See how the other layer’s neurons ought to change (up or down and by how much based on how far each is from its desired value) and do ALL this for EACH individual neuron in the output layer. (see adding up and down arrows at 7:55)
-> Changing weights of neurons with high activations also has a larger effect than weights of neurons with low activation / changing activation of ones with weights vice versa.
-> Basically, go layer by layer backwards up the neural network, from ass to head, and see what is the desired change for each neuron in the layer to then find the needed nudges to make those nudges in the layer before THAT to see what is the needed nudges to make… ect. Sum the nudges together somehow and you get the net tweak for ur output activation values. That is what we’re doing, but not HOW we do it, that takes a lot of math.
-> Doing this backpropagation for many many many different images is what is actually training the network. This is done by recording the desired changes of each component of the neural network for every trial and then averaging the changes per component. I.e. trial 1 says change W12 by +8, and trial 2 says change W12 by -5, so on and so on, so 8-5+.../n is the net change you should make for that one weight.
-> Funnily and cool enough, putting all the changes in a column vector gets you the negative gradient of the cost function. Or at least something proportional.
-> THIS IS ALL SWAG EXCEPT ITS SO MUCH MATH SO WE DO SOMETHING SIMPLER INSTEAD.
-> Randomly shuffle activation data for all the numbers u fed the machine.
-> Divide into sections, i.e. 100 groups of activations per section.
-> Find avg of that, that is a good approx of the steepest descent.
-> Avg all those avgs (maybe)
-> Or just prolly take each one of those steps sequentially
-> This is called Stochastic Gradient Descent.
+## [Link 3](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 
+> - Backpropagation is how we compute the steepest descent:<br>
+> When it comes to honing-in on the lowest cost, changing a large weight value<br>
+> will have a larger effect on the cost than changing a small weight value.<br>
+> <br>
+> - Look at output layer from the neural network and how it compares to expected values.<br>
+> Activations that are close to expected values should be nudged a little bit and<br>
+> activations that are super far should be nudged a lot.<br>
+> Nudges can be either up or down.<br>
+> <br>
+> - For each output neuron, there are three ways to modify its output:<br>
+> - - Change bias,<br>
+> - - Change weights,<br>
+> - - Change previous layers’ activations.<br>
+> - - We can do the latter by seeing how the other layers' neurons compare to<br>
+> - - Expected values, and change **ALL** of **ITS** weights and biases,<br>
+> - - doing so for **EACH** individual neuron in the layer.<br>
+> - - (See adding up and down arrows at 7:55)<br>
+> <br>
+> - Changing weights of neurons with high activations also has a larger effect than<br>
+> Changing the weights of neurons with low activation.<br>
+><br>
+> - **Note: It is hardest to change a neuron's activation**<br>
+> **It is also complex to change weights**<br>
+> **While it is the easiest to change biases**<br>
+<br>
+> - Basically, you're going layer by layer backwards up the neural network,<br>
+> and seeing what the desired change for each neuron in the layer is<br>
+> to then find what you need to change in the layer before *THAT* to make those changes happen<br>
+> <br>
+> - Sum the needed nudges to neuron activations together *somehow...* and you get<br>
+> the net tweaking needed for each neuron in the output layer.<br>
+> That is **what** we’re doing, but not **how** we're doing it because *thaaat* takes a lot of math...<br>
+> <br>
+> - Doing this backpropagation for many many many different images is what we call training the network.<br>
+> This is done by recording how much of a step along the gradient each individual component of the neural network needs<br>
+> Do this for every trial you run and then average the amount you should change **each component of the network.**<br>
+> I.e. after backpropagation for trial 1, it says change weight 12 by +8, and trial 2 says change weight 12 by -5<br>
+> and so on and so on... Hence: (8+ -5+...)/(number of trials) is the *net change* you should make for that ***one weight.***<br>
+> Do **ALL OF THIS** for every weight and/or bias and/or activation until you get accurate output activations.<br>
+> <br>
+> - Funnily enough, compiling all these changes into a column vector<br>
+> gets you something proportional to the negative gradient.<br>
+> <br>
+> - In all honesty, this is quite complex. So we tend to do a much simpler, good-enough approx.<br>
+> <br>
+> - The steps are as follows:<br>
+> - - Randomly shuffle output activation data for all the written numbers you analyzed.<br>
+> - - Divide output layer results into sections, i.e. 100 layers per section.<br>
+> - - Find the cost of each subgroup, which is a good approx of the steepest descent.<br>
+> - - Take each one of those steps along the gradient sequentially.<br>
+> - - This process is called Stochastic Gradient Descent.<br>
+> - It looks a lot like a zig-zag series of small steps down the gradient path<br>
+> Which is a lot more efficient than a slow, methodical, exact path down the gradient<br>
+> and it gets the job done.<br>
+<br>
   
 
-# https://www.youtube.com/watch?v=tIeHLnjs5U8
+# <font color="#FFC19C">Video 4</font>
 
-> ## Video 4:
-> HIIIII
- Hi
- <font color="green"> Hi </font>
+## [Link 4](https://www.youtube.com/watch?v=tIeHLnjs5U8)
+
+> - The activation for a given neuron is defined by the sigmoid of <br>
+> the weight between neurons times the previous neuron's activation<br>
+> plus the bias of the current neuron.<br>
+> <br>
+> - Put in perspective:<br>
+> an activation is defined by a weight<br>
+> which is also defined by an activation<br>
+> which is defined by a weight and so on...<br>
+> so things get quite complex.<br>
+><br>
+> - To get the cost: take a singular output activation,<br>
+> square it, and then subtract the expected value squared.<br>
+> Do this for **every** output in the output layer.<br>
+> Average the change needed for **each** weight and bias in the neural network.<br>
+> Then repeat everything again for a new handwritten number.<br>
+> That is the mathematical approach to backpropagation; This is machine learning.<br>
+> <br>
+> - *It should be noted that when finding the cost:*<br>
+> *You look one component at a time to find how much*<br>
+> *the component needs to be tweaked. For example:*<br>
+> - - In trial 1 you run through all the weights and biases and<br>
+> - - How much each should change.<br>
+> - - After completing all the trials, you look exculsively at<br>
+> - - weight 1 and average how much it changed over all the trials<br>
+> - - then look at weight 2 and average it<br>
+> - - then bias 3, bias 15...<br>
+> - - ***You are averaging the change in each weight and bias independently.***<br>
+> - - ***You are integrating all of their changes together at once.***<br>
+> - - ***There is no expression for some "total cost" where some singular***<br>
+> - - ***imaginary number gets moved up or down and suddenly everything is perfect.***<br>
+> <br>
+> - There is a lot of mathematical notation, multivariable derivatives with chain rules, but<br>
+> - if you want to see the equations, just go to 3:55 and 4:55<br>
