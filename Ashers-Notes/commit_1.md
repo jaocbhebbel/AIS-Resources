@@ -113,6 +113,7 @@
 > It is also complex to change weights<br>
 > While it is the easiest to change biases</strong><br>
 > <br>
+> 
 > - Basically, you're going layer by layer backwards up the neural network,<br>
 > and seeing what the desired change for each neuron in the layer is<br>
 > to then find what you need to change in the layer before <em>THAT</em> to make those changes happen<br>
@@ -122,6 +123,7 @@
 > the net tweaking needed for each neuron in the output layer.<br>
 > That is <strong>what</strong> we’re doing, but not <strong>how</strong> we're doing it because <em>thaaat</em> takes a lot of math...<br>
 > <br>
+> 
 > - Doing this backpropagation for many many many different images is what we call training the network.<br>
 > This is done by recording how much of a step along the gradient each individual component of the neural network needs<br>
 > Do this for every trial you run and then average the amount you should change <strong>each component of the network.</strong><br>
@@ -192,4 +194,4 @@
 > <br>
 >
 > - There is a lot of mathematical notation, multivariable derivatives with chain rules, but<br>
-> - if you want to see the equations, just go to 3:55 and 4:55<br>
+> if you want to see the equations, just go to 3:55 and 4:55<br>
