@@ -22,7 +22,7 @@
 > - So that’s cool, but weighted sums are typically large numbers<br>
 > So we put them in a sigmoid function to squish 'em down to a 0-->1 range.<br>
 > <br>
-> - Ok, well mabye you don’t want **0** to **1** to be the threshold for the next neuron to activate...<br>
+> - Ok, well mabye you don’t want <strong>0</strong> to <strong>1</strong> to be the threshold for the next neuron to activate...<br>
 > *This could be for a few reasons I do not know...*<br>
 > So, we can add/subtract to the weight to change it.<br>
 > This changes the value the incoming signal needs to activate the next neuron<br>
@@ -83,13 +83,13 @@
 > Nudges can be either up or down.<br>
 > <br>
 > - For each output neuron, there are three ways to modify its output:<br>
-> - - Change bias,<br>
-> - - Change weights,<br>
-> - - Change previous layers’ activations.<br>
-> - - We can do the latter by seeing how the other layers' neurons compare to<br>
-> - - Expected values, and change **ALL** of **ITS** weights and biases,<br>
-> - - doing so for **EACH** individual neuron in the layer.<br>
-> - - (See adding up and down arrows at 7:55)<br>
+>   - Change bias,<br>
+>   - Change weights,<br>
+>   - Change previous layers’ activations.<br>
+>   - We can do the latter by seeing how the other layers' neurons compare to<br>
+>   - Expected values, and change **ALL** of **ITS** weights and biases,<br>
+>   - doing so for **EACH** individual neuron in the layer.<br>
+>   - (See adding up and down arrows at 7:55)<br>
 > <br>
 > - Changing weights of neurons with high activations also has a larger effect than<br>
 > Changing the weights of neurons with low activation.<br>
@@ -119,11 +119,11 @@
 > - In all honesty, this is quite complex. So we tend to do a much simpler, good-enough approx.<br>
 > <br>
 > - The steps are as follows:<br>
-> - - Randomly shuffle output activation data for all the written numbers you analyzed.<br>
-> - - Divide output layer results into sections, i.e. 100 layers per section.<br>
-> - - Find the cost of each subgroup, which is a good approx of the steepest descent.<br>
-> - - Take each one of those steps along the gradient sequentially.<br>
-> - - This process is called Stochastic Gradient Descent.<br>
+>   - Randomly shuffle output activation data for all the written numbers you analyzed.<br>
+>   - Divide output layer results into sections, i.e. 100 layers per section.<br>
+>   - Find the cost of each subgroup, which is a good approx of the steepest descent.<br>
+>   - Take each one of those steps along the gradient sequentially.<br>
+>   - This process is called Stochastic Gradient Descent.<br>
 > - It looks a lot like a zig-zag series of small steps down the gradient path<br>
 > Which is a lot more efficient than a slow, methodical, exact path down the gradient<br>
 > and it gets the job done.<br>
@@ -154,16 +154,16 @@
 > - *It should be noted that when finding the cost:*<br>
 > *You look one component at a time to find how much*<br>
 > *the component needs to be tweaked. For example:*<br>
-> - - In trial 1 you run through all the weights and biases and<br>
-> - - How much each should change.<br>
-> - - After completing all the trials, you look exculsively at<br>
-> - - weight 1 and average how much it changed over all the trials<br>
-> - - then look at weight 2 and average it<br>
-> - - then bias 3, bias 15...<br>
-> - - ***You are averaging the change in each weight and bias independently.***<br>
-> - - ***You are integrating all of their changes together at once.***<br>
-> - - ***There is no expression for some "total cost" where some singular***<br>
-> - - ***imaginary number gets moved up or down and suddenly everything is perfect.***<br>
+>   - In trial 1 you run through all the weights and biases and<br>
+>   - How much each should change.<br>
+>   - After completing all the trials, you look exculsively at<br>
+>   - weight 1 and average how much it changed over all the trials<br>
+>   - then look at weight 2 and average it<br>
+>   - then bias 3, bias 15...<br>
+>   - ***You are averaging the change in each weight and bias independently.***<br>
+>   - ***You are integrating all of their changes together at once.***<br>
+>   - ***There is no expression for some "total cost" where some singular***<br>
+>   - ***imaginary number gets moved up or down and suddenly everything is perfect.***<br>
 > <br>
 > - There is a lot of mathematical notation, multivariable derivatives with chain rules, but<br>
 > - if you want to see the equations, just go to 3:55 and 4:55<br>
