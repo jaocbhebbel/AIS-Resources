@@ -142,6 +142,8 @@
 >    - Find the cost of each subgroup, which is a good approx of the steepest descent.<br>
 >    - Take each one of those steps along the gradient sequentially.<br>
 >    - This process is called Stochastic Gradient Descent.<br>
+> <br>
+>
 > - It looks a lot like a zig-zag series of small steps down the gradient path<br>
 > Which is a lot more efficient than a slow, methodical, exact path down the gradient<br>
 > and it gets the job done.<br>
