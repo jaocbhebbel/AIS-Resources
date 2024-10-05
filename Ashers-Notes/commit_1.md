@@ -117,6 +117,7 @@
 > and seeing what the desired change for each neuron in the layer is<br>
 > to then find what you need to change in the layer before <em>THAT</em> to make those changes happen<br>
 > <br>
+> 
 > - Sum the needed nudges to neuron activations together <em>somehow...</em> and you get<br>
 > the net tweaking needed for each neuron in the output layer.<br>
 > That is <strong>what</strong> we’re doing, but not <strong>how</strong> we're doing it because <em>thaaat</em> takes a lot of math...<br>
