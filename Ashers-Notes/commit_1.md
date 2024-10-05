@@ -5,6 +5,7 @@
 
 > - Neuron – Thing that holds a number.<br>
 > <br>
+>
 > - The number inside the neuron is from 1-0 and it is called the activation.<br>
 > It represents how much the handwritten number looks like a number 0-9.<br>
 > <br>
