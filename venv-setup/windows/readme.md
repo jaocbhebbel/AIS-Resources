@@ -36,6 +36,18 @@ exit the venv with `deativate`
 open vscode. inside vscode, open the folder you're using for this project (should be the same/parent of venv directory)
 click on the search bar top center of the screen. search `>Python: Select Interpreter`
 select the enter interpreter path option, and use the find feature to navigate to its location.
-Enter the folder called ais, enter the Scripts subfolder, and select the file named python.
 
+enter the folder called ais, enter the Scripts subfolder, and select the file named python.
+now you have the python interpreter identified, try writing to a .py file some test code
+
+`import numpy`
+
+if vscode says this module isn't found, then something went wrong.
+
+else, you are good to start coding! go through the tutorials, and write out the code they do
+you'll learn fastest by **not copy pasting code from the tutorial to your screen**
+its a little tedious, but have both windows open and follow along
+I personally haven't verified *when* the tutorial starts developing the image classification network, but hopefully the whole thing takes less than two hours. this is my best guess
+
+if you run into any questions or errors, send a message in the #help-me section of the discord
 
