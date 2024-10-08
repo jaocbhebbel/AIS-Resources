@@ -8,6 +8,7 @@ the requirements.txt lists all the python libraries and their respective version
 
 ### setup
 
+download the files in this directory
 the runme.bat executes commands inside your terminal to build the venv with the name *ais*
 this is the name of your virtual environment. your venv is named *ais*
 to activate your venv, you should be in the same directory as it
