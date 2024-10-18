@@ -15,3 +15,20 @@ Sharing a virtual machine with others, especially in a professional or collabora
 8. [Example AI Training File Structure](#example-ai-training-file-structure)
 
 ---
+
+## General Guidelines
+
+### 1. Respect System Resources
+- Always be mindful of CPU, memory, and disk usage.
+- If your task is computationally heavy (e.g., training a large AI model), ensure others are aware and not affected by slowdowns or crashes.
+- Don't run long, resource-intensive processes without notifying others.
+
+### 2. Clean Up After Yourself
+- Once you finish a task, ensure that you clean up unused files, shut down processes, and remove any environment-specific configurations that are no longer needed.
+- Avoid leaving personal temporary files or unused VMs/data lying around, cluttering shared space.
+
+### 3. Consistency in Naming
+- Use clear, consistent naming conventions for directories, scripts, virtual environments, and files.
+- Prefix your files or directories with your username or project name, e.g., `john_model_training/`.
+
+---
