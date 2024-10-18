@@ -64,4 +64,18 @@ Sharing a virtual machine with others, especially in a professional or collabora
 - Regularly remove unused or obsolete files to avoid clutter. If unsure, communicate with the team before deleting shared files.
 
 ---
+## Security Best Practices
+
+### 1. Use SSH Keys
+- If accessing the VM remotely, use secure methods like SSH keys rather than plain passwords.
+- Avoid sharing your SSH key or credentials with others. If others need access, ensure they generate and use their own keys.
+
+### 2. Monitor Permissions
+- Be mindful of file permissions. Use `chmod` to set appropriate access permissions on your files.
+- Don’t open your directories to everyone unless it's necessary (`chmod 777` should be avoided in most cases).
+
+### 3. Update and Patch
+- Regularly update your software to ensure it's patched against vulnerabilities. Coordinate these updates with the team.
+
+---
 
