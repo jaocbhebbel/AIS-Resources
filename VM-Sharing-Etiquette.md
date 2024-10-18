@@ -93,4 +93,21 @@ Sharing a virtual machine with others, especially in a professional or collabora
 
 ---
 
+## Frequent FAQs: Do's and Don'ts
+
+### **Do**  
+1. **Respect Usage Limits:** Always ask if you're unsure about resource consumption.
+2. **Coordinate Jobs:** If you're about to run a big job, communicate with the team to avoid bottlenecks.
+3. **Use Virtual Environments:** They prevent conflicts between different projects.
+4. **Backup Important Data:** Use external drives or cloud storage to back up important results. (locally on your computer will be fine, We will explain scp when needed)
+5. **Monitor Your Jobs:** Keep an eye on your jobs, especially long-running tasks. Don’t let jobs run unattended without oversight.
+
+### **Don’t**
+1. **Don’t Leave Processes Unattended**: Ensure that long-running tasks won’t affect other users negatively by leaving them without monitoring.
+2. **Don’t Hard Code Paths:** Avoid hard-coding paths that are specific to your user space. Instead, use relative paths or variables that generalize the environment for others.
+3. **Don’t Store Unnecessary Files:** Clean up your environment by removing unnecessary files and directories after completion of your tasks.
+4. **Don’t Override Shared Configurations:** Avoid modifying shared configuration files or system settings without first consulting with other users.
+
+---
+
 
