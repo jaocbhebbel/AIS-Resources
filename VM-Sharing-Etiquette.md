@@ -79,3 +79,18 @@ Sharing a virtual machine with others, especially in a professional or collabora
 
 ---
 
+## Environment Management
+
+### 1. Use Virtual Environments (Venv)
+- Create and activate virtual environments for each project to isolate dependencies. (Information on this is located in this repo but not in htis file)
+- Always deactivate or remove environments that are no longer needed to free up resources.
+
+
+
+### 2. Version Control
+- Use version control tools like Git for your scripts and code, ensuring that collaborators have access to the latest versions.
+- Set up a shared repository to manage and track changes.
+
+---
+
+
