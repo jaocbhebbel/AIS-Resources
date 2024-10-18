@@ -109,5 +109,51 @@ Sharing a virtual machine with others, especially in a professional or collabora
 4. **Don’t Override Shared Configurations:** Avoid modifying shared configuration files or system settings without first consulting with other users.
 
 ---
+## Example AI Training File Structure
 
+This is an example of how to set up the Linux file structure for AI training, ensuring separation between users and proper environment management.
 
+```plaintext
+/
+├── home/
+│   ├── user1/
+│   │   ├── projects/
+│   │   │   ├── ai_project_1/
+│   │   │   │   ├── venv/                 # Virtual environment specific to this project
+│   │   │   │   ├── data/                 # Raw data and datasets
+│   │   │   │   ├── scripts/              # Python or shell scripts for training
+│   │   │   │   ├── logs/                 # Log files from training processes
+│   │   │   │   ├── models/               # Trained models or checkpoints
+│   │   │   │   └── results/              # Results (accuracy, loss, etc.)
+│   │   └── shared_scripts/               # Commonly used scripts across projects
+│   ├── user2/
+│   │   ├── projects/
+│   │   │   └── ai_project_2/
+│   │   │       ├── venv/
+│   │   │       ├── data/
+│   │   │       ├── scripts/
+│   │   │       ├── logs/
+│   │   │       ├── models/
+│   │   │       └── results/
+├── shared_data/
+│   ├── datasets/                          # Datasets accessible by all users
+│   └── preprocessed/                      # Preprocessed data shared by users
+├── projects/
+│   ├── ai_project_3/                      # Shared project worked on by multiple users
+│   │   ├── user1_env/                     # User 1's specific environment
+│   │   ├── user2_env/                     # User 2's specific environment
+│   │   ├── data/
+│   │   ├── scripts/
+│   │   ├── logs/
+│   │   ├── models/
+│   │   └── results/
+└── tools/
+    ├── conda/                             # Conda installations
+    └── other_ml_tools/                    # Shared tools for AI development (e.g., TensorFlow, PyTorch)
+```
+
+### Key Points:
+- Each user has their own home directory where their projects reside.
+- Shared data and tools are placed in `/shared_data/` and `/tools/` for collaboration.
+- The `venv/` directory is specific to each project, ensuring no cross-contamination of dependencies.
+- The directory structure is clean and allows for easy navigation across individual and shared projects.
