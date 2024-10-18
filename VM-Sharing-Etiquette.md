@@ -51,3 +51,17 @@ Sharing a virtual machine with others, especially in a professional or collabora
 
 ---
 
+## File Organization
+
+### 1. Follow Agreed-upon File Structures
+- Agree on a common file structure for storing datasets, scripts, results, and logs.
+- Keep your files well-organized by creating clear directories for each project or task.
+
+### 2. Limit the Use of Home Directories
+- Avoid using personal home directories (`/home/yourname`) to store shared project files. Instead, use project-specific directories located in common spaces like `/projects/` or `/data/`.
+
+### 3. Delete Obsolete Files
+- Regularly remove unused or obsolete files to avoid clutter. If unsure, communicate with the team before deleting shared files.
+
+---
+
