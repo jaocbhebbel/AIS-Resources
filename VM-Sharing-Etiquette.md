@@ -32,3 +32,15 @@ Sharing a virtual machine with others, especially in a professional or collabora
 - Prefix your files or directories with your username or project name, e.g., `john_model_training/`.
 
 ---
+
+## Communication
+
+### 1. Notify Others of Your Activity
+- If you're about to perform tasks that may take up significant resources, notify the team.
+- Use a shared messaging platform (Slack, email, etc.) to communicate when you're starting, and when you've completed heavy tasks.
+
+### 2. Schedule Resource-Heavy Processes
+- When sharing a VM with others, try scheduling large processes (e.g., data preprocessing or model training) during off-hours to minimize impact on other users.
+- Consider setting up time slots when resource-heavy tasks can run without disturbing other users.
+
+---
