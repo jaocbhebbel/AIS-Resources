@@ -39,6 +39,18 @@ Sharing a virtual machine with others, especially in a professional or collabora
 - If you're about to perform tasks that may take up significant resources, notify the team.
 - Use a shared messaging platform (Slack, email, etc.) to communicate when you're starting, and when you've completed heavy tasks.
 
+## Resource Management
+
+### 1. Monitor System Load
+- Regularly monitor CPU, memory, and disk usage using tools like `htop`, `nvidia-smi` (for GPU), or `df -h` for disk space.
+- If resources are scarce, consult others before starting additional processes.
+
+### 2. Use Virtual Environments
+- Use virtual environments (venv, conda, etc.) for your Python projects or any language-specific environments.
+- Ensure that everyone works in isolated environments to avoid dependency conflicts.
+
+---
+
 ### 2. Schedule Resource-Heavy Processes
 - When sharing a VM with others, try scheduling large processes (e.g., data preprocessing or model training) during off-hours to minimize impact on other users.
 - Consider setting up time slots when resource-heavy tasks can run without disturbing other users.
