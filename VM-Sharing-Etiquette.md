@@ -51,8 +51,3 @@ Sharing a virtual machine with others, especially in a professional or collabora
 
 ---
 
-### 2. Schedule Resource-Heavy Processes
-- When sharing a VM with others, try scheduling large processes (e.g., data preprocessing or model training) during off-hours to minimize impact on other users.
-- Consider setting up time slots when resource-heavy tasks can run without disturbing other users.
-
----
